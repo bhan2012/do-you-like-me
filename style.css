@@ -1,0 +1,148 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    font-size: 17px;
+    font-weight: 700;
+    padding: 12px 32px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.container {
+    text-align: center;
+}
+
+#title {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    width: 100%;
+    font-size: clamp(24px,4vw, 48px);
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+#speaker {
+    border-color: #b2b2b2; 
+    margin-bottom: 20px;
+}
+
+#speaker:hover {
+    color: white;
+    background-color: #c5439c;
+    border-color: #732562;
+}
+
+#speaker:active {
+    background-color: #3c6cb9;
+    transform: translateY(1px);
+}
+
+#yes {
+    background-color: #A8C9A0;
+    color: #29452B;
+    border: 2px solid #A8C9A0;
+    box-shadow: 0 4px 0 #7FA477;
+}
+
+#yes:hover {
+    background-color: #91B989;
+    border-color: #91B989;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 0 #7FA477;
+}
+
+#yes:active{
+    background-color: #7FA477;
+    transform: translateY(1px);
+
+}
+
+#no {
+    background-color: #F4A6A6;
+    color: #702F36;
+    border: 2px solid #F4A6A6;
+    box-shadow: 0 4px 0 #DE858B;
+}
+
+#no:hover {
+    background-color: #EE9298;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 0 #DE858B;
+}
+
+#no:active{
+    background-color: #DE858B;
+    transform: translateY(1px);
+
+}
+
+#celebration {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 999;
+}
+
+#celebration span {
+    position: absolute;
+    top: -30px;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-10vh);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+#heart1 {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    transform: translate(-50%, -50%) scale(2);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    z-index: 1000;
+}
+
+@keyframes fallExpand {
+    from {
+        transform: translateY(-10vh) scale(0.2);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(100vh) scale(2);
+        opacity: 1;
+    }
+}
+
+#message {
+    display: none;
+    opacity: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: clamp(24px, 4vw, 48px);
+    color: #b43d9c;
+    margin-bottom: 300px;
+}
